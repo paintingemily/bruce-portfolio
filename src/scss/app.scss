@@ -1,0 +1,16 @@
+@import 'base/variables';
+@import 'base/typography';
+@import 'base/global';
+@import 'base/slider';
+@import 'home';
+@import 'nav';
+@import 'project';
+
+body {
+  background-color: $primary;
+  font-family: 'Lato', sans-serif;
+}
+
+.hidden {
+  display: none !important;
+}

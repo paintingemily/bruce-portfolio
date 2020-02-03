@@ -1,44 +1,65 @@
 <!DOCTYPE js>
 <html>
   <head>
-    <title>Bruce Benson, UX/UI Designer</title>
+    <title>Bruce Benson, some kind of designer</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i&amp;display=swap" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <style type="text/css">
+      body {
+        visibility: hidden;
+        opacity: 0;
+      }
+      
+    </style>
   <link href="/css/app.css" rel="stylesheet"></head>
   <body>
     <nav>
+      <div class="logo">Bruce Benson</div>
       <button id="nav-trigger" aria-label="open navigation menu"></button>
       <ul class="nav-links hidden">
         <li><a href="/">Home</a></li>
-        <li><a href="/">Office 365 Commerce</a></li>
-        <li><a href="/">Azure Playfab</a></li>
-        <li><a href="/">T-Mobile DIGITS</a></li>
-        <li><a href="/">Xbox Design Studio</a></li>
-        <li><a href="/">Sketchbook</a></li>
-        <li><a href="/">About</a></li>
+        <li><a href="/project.html">Office 365 Commerce</a></li>
+        <li><a href="/project.html">Azure Playfab</a></li>
+        <li><a href="/project.html">T-Mobile DIGITS</a></li>
+        <li><a href="/project.html">Xbox Design Studio</a></li>
+        <li><a href="/project.html">Sketchbook</a></li>
+        <li><a href="/project.html">About</a></li>
       </ul>
     </nav>
     <div class="slides">
       <section class="slide in-view" id="intro">
-        <h1> <span>My name is Bruce Benson, and</span><span>I’m some kind* of digital designer</span><span>in Seattle, Washington.</span></h1>
+        <div class="background"></div>
+        <h1> <span class="intro-text">MY NAME IS BRUCE BENSON AND I DO…</span><span class="primary-text main-heading"><span>SOME KIND </span><span>OF DESIGN*</span></span><span class="disclaimer">* I HATE KEEPING UP WITH LABELS - UX, UI, PRODUCT, VISUAL, ETC. I FIGURE THINGS OUT AND TRY TO MAKE THEM LOOK COOL ;)</span></h1>
       </section>
       <section class="slide" id="office">
-        <h2 class="project-title">Office 365 Commerce</h2>
+        <div class="background"></div>
+        <div class="project-title"><a class="project-title__link" href="/project.html">
+            <h2 class="main-heading">Microsoft Office 365<span>UX/UI, SUPER SECRET PRODUCT DESIGN</span></h2></a></div>
       </section>
       <section class="slide" id="azure">
-        <h2 class="project-title">Azure Playfab</h2>
+        <div class="background"></div>
+        <div class="project-title block-style"><a class="project-title__link" href="/project.html">
+            <h2 class="main-heading">Azure Playfab<span>UX/UI, DESIGN SYSTEM</span></h2></a></div>
       </section>
       <section class="slide" id="tmobile">
-        <h2 class="project-title">T-Mobile DIGITS</h2>
+        <div class="background"></div>
+        <div class="project-title"><a class="project-title__link" href="/project.html">
+            <h2 class="main-heading">T-Mobile DIGITS</h2><span>UX/UI, PRODUCT DESIGN</span></a></div>
       </section>
       <section class="slide" id="xbox">
-        <h2 class="project-title">Xbox Design Studio</h2>
+        <div class="background"></div>
+        <div class="project-title block-style"><a class="project-title__link" href="/project.html">
+            <h2 class="main-heading">Xbox Design Studio<span>UX/UI, PRODUCTION</span></h2></a></div>
       </section>
-      <section class="slide" id="sketchbook">
-        <h2 class="project-title">sketchbook</h2>
+      <section class="slide" id="shudder">
+        <div class="background"></div>
+        <div class="project-title"><a class="project-title__link" href="/project.html">
+            <h2 class="main-heading">Shudder<span>COMING SOON • UX/UI, PRODUCT DESIGN</span></h2></a></div>
       </section>
-      <section class="slide" id="contact">
-        <h2 class="project-title">about</h2>
+      <section class="slide" id="about">
+        <div class="background"></div>
+        <div class="project-title block-style"><a class="project-title__link" href="/project.html">
+            <h2 class="main-heading">ABOUT+PROCESS<span>WHO THE #@%&amp; IS THIS GUY?</span></h2></a></div>
       </section>
     </div>
   <script type="text/javascript" src="/js/app.js"></script><script type="text/javascript" src="/js/vendor.js"></script></body>

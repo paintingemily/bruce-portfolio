@@ -5,7 +5,7 @@
   "main": "index.js",
   "loglevel": "silent",
   "scripts": {
-    "build": "npm run clean -s && npm run production -s",
+    "compile": "npm run clean -s && npm run production -s",
     "clean": "rimraf public",
     "dev": "cross-env webpack --config ./webpack/webpack.dev.js",
     "production": "cross-env webpack --progress --hide-modules --config ./webpack/webpack.prod.js",

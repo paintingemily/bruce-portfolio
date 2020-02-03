@@ -1,10 +1,28 @@
 nav {
     position: fixed;
-    width: 50px;
-    height: 50px;
     right: 0;
     top: 0;
     z-index: 100;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: .5s background ease;
+
+    @media (min-width: $tablet) {
+        padding: 20px 60px;
+
+        &:after {
+            width: calc(100% - 120px);
+            left: 60px;
+        }
+    }
+
+    &:hover {
+        background: rgba(0, 0, 0, 0.4);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        background-blend-mode: multiply;
+    }
 
     &:before {
         content: '';
@@ -20,16 +38,48 @@ nav {
         z-index: -1;
     }
 
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: calc(100% - 40px);
+        left: 20px;
+        bottom: 0;
+        height: 1px;
+        background: white;
+    }
+
+    .logo {
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: italic;
+        line-height: normal;
+        letter-spacing: -0.49px;
+        color: #ffffff;
+    }
+
     #nav-trigger {
         width: 50px;
         height: 50px;
-        padding: 15px;
+        padding: 20px;
         border: none;
         background: none;
         cursor: pointer;
         position: absolute;
-        top: 0;
+        width: 50px;
+        height: 50px;
         right: 0;
+        top: 0;
+        position: absolute;
+        z-index: 2;
+
+        @media (min-width: $tablet) {
+            top: 0;
+            right: 60px;
+            padding: 15px;
+        }
 
         &:hover {
             &:before {
@@ -106,7 +156,12 @@ nav {
         align-items: center;
         justify-content: center;
         align-content: center;
-        padding: 0;
+
+        padding: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
 
         li > a {
             color: black;

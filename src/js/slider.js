@@ -23,7 +23,6 @@ export default function slider(sliderElement) {
         scrolled = true;
         setTimeout(function(){
           scrolled = false
-          console.log('timeout');
         }, 1500); 
       }
     });
@@ -70,32 +69,34 @@ export default function slider(sliderElement) {
 
 
     // stuff for touch devices
-    var touchStartPos = 0;
-    var touchStopPos = 0;
-    var touchMinLength = 90;
-    document.addEventListener('touchstart', function (e) {
-      if (e.target.nodeName !== "BUTTON" && e.target.nodeName !== "A") {
-        e.preventDefault();
-      }
-      if (e.type == 'touchstart' || e.type == 'touchmove' || e.type == 'touchend' || e.type == 'touchcancel') {
-        var touch = e.touches[0] || e.changedTouches[0];
-        touchStartPos = touch.pageY;
-      }
-    });
-    document.addEventListener('touchend', function (e) {
-      if (e.target.nodeName !== "BUTTON" && e.target.nodeName !== "A") {
-        e.preventDefault();
-      }
-      if (e.type == 'touchstart' || e.type == 'touchmove' || e.type == 'touchend' || e.type == 'touchcancel') {
-        var touch = e.touches[0] || e.changedTouches[0];
-        touchStopPos = touch.pageY;
-      }
-      if (touchStartPos + touchMinLength < touchStopPos) {
-        changeSlide(-1);
-      } else if (touchStartPos > touchStopPos + touchMinLength) {
-        changeSlide(1);
-      }
-    });
+    if ("ontouchstart" in document.documentElement) {
+      var touchStartPos = 0;
+      var touchStopPos = 0;
+      var touchMinLength = 90;
+      document.addEventListener('touchstart', function (e) {
+        if (e.target.nodeName !== "BUTTON" && e.target.nodeName !== "A") {
+          e.preventDefault();
+        }
+        if (e.type == 'touchstart' || e.type == 'touchmove' || e.type == 'touchend' || e.type == 'touchcancel') {
+          var touch = e.touches[0] || e.changedTouches[0];
+          touchStartPos = touch.pageY;
+        }
+      });
+      document.addEventListener('touchend', function (e) {
+        if (e.target.nodeName !== "BUTTON" && e.target.nodeName !== "A") {
+          e.preventDefault();
+        }
+        if (e.type == 'touchstart' || e.type == 'touchmove' || e.type == 'touchend' || e.type == 'touchcancel') {
+          var touch = e.touches[0] || e.changedTouches[0];
+          touchStopPos = touch.pageY;
+        }
+        if (touchStartPos + touchMinLength < touchStopPos) {
+          changeSlide(-1);
+        } else if (touchStartPos > touchStopPos + touchMinLength) {
+          changeSlide(1);
+        }
+      });
+    }
   };
 
 

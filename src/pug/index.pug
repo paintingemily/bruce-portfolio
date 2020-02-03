@@ -1,27 +1,61 @@
 html
   head
-    title Bruce Benson, UX/UI Designer
+    title Bruce Benson, some kind of designer
   
     link(href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i&display=swap" rel="stylesheet")
     meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+
+    style(type="text/css").
+      body {
+        visibility: hidden;
+        opacity: 0;
+      }
 
   body
     include nav
     .slides
       section#intro.slide.in-view
+        .background
         h1 
-          span My name is Bruce Benson, and
-          span I’m some kind* of digital designer
-          span in Seattle, Washington.
+          span.intro-text MY NAME IS BRUCE BENSON AND I DO…
+          span.primary-text.main-heading
+            span SOME KIND 
+            span OF DESIGN*
+          //- span.disclaimer * I HATE KEEPING UP WITH LABELS - UX/UI/PRODUCT/VISUAL/PRODUCTION - I FIGURE THINGS OUT AND TRY TO MAKE THEM LOOK COOL ;)
+          span.disclaimer * I HATE KEEPING UP WITH LABELS - UX, UI, PRODUCT, VISUAL, ETC. I FIGURE THINGS OUT AND TRY TO MAKE THEM LOOK COOL ;)
       section#office.slide
-        h2.project-title Office 365 Commerce
+        .background
+        .project-title
+            a.project-title__link(href="/project.html")
+              h2.main-heading Microsoft Office 365
+                span UX/UI, SUPER SECRET PRODUCT DESIGN
       section#azure.slide
-        h2.project-title Azure Playfab
+        .background
+        .project-title.block-style
+          a.project-title__link(href="/project.html")
+            h2.main-heading Azure Playfab
+              span UX/UI, DESIGN SYSTEM
       section#tmobile.slide
-        h2.project-title T-Mobile DIGITS
+        .background
+        .project-title
+            a.project-title__link(href="/project.html")
+              h2.main-heading T-Mobile DIGITS
+              span UX/UI, PRODUCT DESIGN
       section#xbox.slide
-        h2.project-title Xbox Design Studio
-      section#sketchbook.slide
-        h2.project-title sketchbook
-      section#contact.slide
-        h2.project-title about
+        .background
+        .project-title.block-style
+            a.project-title__link(href="/project.html")
+              h2.main-heading Xbox Design Studio
+                span UX/UI, PRODUCTION
+      section#shudder.slide
+        .background
+        .project-title
+            a.project-title__link(href="/project.html")
+              h2.main-heading Shudder
+                span COMING SOON • UX/UI, PRODUCT DESIGN
+      section#about.slide
+        .background
+        .project-title.block-style
+            a.project-title__link(href="/project.html")
+              h2.main-heading ABOUT+PROCESS
+                span WHO THE #@%&amp; IS THIS GUY?

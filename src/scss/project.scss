@@ -9,17 +9,28 @@
     }
 
     .two-column {
-        display: grid;
-        grid-template-columns: 40% 60%;
-        padding: 64px 120px;
+        padding: 25px;
         box-sizing: border-box;
-        max-width: 1440px;
         margin: 0 auto;
 
+        @media(min-width: $tablet) {
+            padding: 64px 120px;
+            display: grid;
+            grid-template-columns: 40% 60%;
+            max-width: 1440px;
+
+            &__heading {
+                padding-right: 111px;
+                margin-right: 62px;
+                border-right: 1px solid $border;
+            }
+
+            &__description {
+
+            }
+        }
+
         &__heading {
-            border-right: 1px solid $border;
-            padding-right: 111px;
-            margin-right: 62px;
 
             .sub-head {
                 display: block;
@@ -28,6 +39,7 @@
         }
 
         &__description {
+
             p:not(:last-of-type) {
                 margin-bottom: 20px;
             }
@@ -52,12 +64,6 @@
                 margin-bottom: 0;
             }
         }
-    }
-
-    blockquote {
-        width: 792px;
-        margin: 0 auto;
-        padding: 200px 0;
     }
 
     .full-image {

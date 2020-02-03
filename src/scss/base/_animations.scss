@@ -1,0 +1,62 @@
+@keyframes bounce {
+    0% {
+      transform: translateX(-100%);
+    }
+    40% {
+      border-radius: 0;
+    }
+    100% {
+      transform: translateX(0);
+      border-radius: 0;
+    }
+}
+
+@keyframes rotate180 {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes gentleScale {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes blurIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opactiy: 1;
+    }
+}
+
+@keyframes headerGradient {
+    from {
+        background: linear-gradient(165deg, #fccf3a 0%, #de791e 43%, #ea5a6f 100%);
+    }
+    to {
+        background: linear-gradient(165deg, #ea5a6f  0%, #de791e 43%, #fccf3a 100%);
+    }
+}
+
+@keyframes bkgGradient {
+    0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

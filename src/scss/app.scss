@@ -1,6 +1,7 @@
 @import 'base/variables';
 @import 'base/typography';
 @import 'base/global';
+@import 'base/animations';
 @import 'base/slider';
 @import 'home';
 @import 'nav';
@@ -13,4 +14,9 @@ body {
 
 .hidden {
   display: none !important;
+}
+
+.page-loaded {
+  visibility: visible;
+  opacity: 1;
 }

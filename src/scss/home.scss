@@ -12,12 +12,10 @@
     width: 100%;
     height: 100%;
     display: block;
-    background: linear-gradient(165deg, #fccf3a 0%, #de791e 43%, #ea5a6f 100%);
     mix-blend-mode: overlay;
     position: absolute;
     top: 0;
     left: 0;
-    animation: 10s bkgGradient ease infinite;
     background-size: 200% 200%;
   }
 
@@ -26,14 +24,10 @@
     width: 100%;
     height: 100%;
     display: block;
-    background: linear-gradient(165deg, #fccf3a 0%, #de791e 43%, #ea5a6f 100%);
-    opacity: .65;
     position: absolute;
     top: 0;
     left: 0;
-    animation: 10s bkgGradient ease infinite;
     background-size: 200% 200%;
-
   }
 }
 
@@ -44,6 +38,17 @@
 
   .background {
     background-image: url('/assets/images/sketch-bkg.webp');
+
+    &:before {
+      background: linear-gradient(165deg, #fccf3a 0%, #de791e 43%, #ea5a6f 100%);
+      animation: 10s bkgGradient ease infinite;
+    }
+  
+    &:after {
+      background: linear-gradient(165deg, #fccf3a 0%, #de791e 43%, #ea5a6f 100%);
+      opacity: .65;
+      animation: 10s bkgGradient ease infinite;
+    }
   }
   
   h1 {
@@ -257,13 +262,17 @@
   background-position: center center;
   background-size: cover;
   animation: gentleScale 5s infinite alternate-reverse ease;
+
   &:before {
     background-image: linear-gradient(165deg, #3acffcad 0%, #de1e7245 43%, #5aeabb61 100%);
     mix-blend-mode: hard-light;
+    animation: 10s bkgGradient ease infinite;
   }
 
   &:after {
     background-image: linear-gradient(165deg, #3acffcad 0%, #de1e7245 43%, #5aeabb61 100%);
+    opacity: .65;
+    animation: 10s bkgGradient ease infinite;
   }
 }
 
@@ -272,9 +281,15 @@
   background-size: cover;
 }
 
-#tmobile .background {
-  background: url('/assets/images/tmobile-bkg.webp') center center;
-  background-size: cover;
+#tmobile {
+  .background {
+    background: url('/assets/images/tmobile-bkg.webp') center center;
+    background-size: cover;
+  }
+  
+  .project-title__link {
+    color: #e20074;
+  }
 }
 
 #xbox .background {

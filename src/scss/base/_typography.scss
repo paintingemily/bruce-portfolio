@@ -59,12 +59,18 @@ h1 {
 
 .section-title {
     font-weight: 500;
-    // font-size: 24px;
-    font-size: 40px;
     line-height: 1.5;
-    // line-height: 28px;
     margin-bottom: 20px;
-    font-family: 'bruce-hand';
+    font-size: 14px;
+    
+    > span {
+        display: block;
+        font-weight: 300;
+
+        .label {
+            font-weight: 500;
+        }
+    }
 
     @media (min-width: $tablet) {
         margin-bottom: 0;

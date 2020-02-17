@@ -67,14 +67,14 @@ export default function slider(sliderElement) {
     document.body.appendChild(indicatorContainer);
     document.querySelector('a[data-slider-target-index = "' + currentSlide +'"]').classList.add('slider__indicator--active');
 
-    var notLink = (e.target.nodeName !== "A" && e.target.parentNode.nodeName !== "A" && e.target.parentNode.parentNode.nodeName !== "A");
-    var notButton = (e.target.nodeName !== "BUTTON" && e.target.parentNode.nodeName !== "BUTTON" && e.target.parentNode.parentNode.nodeName !== "BUTTON");
     // stuff for touch devices
     if ("ontouchstart" in document.documentElement) {
       var touchStartPos = 0;
       var touchStopPos = 0;
       var touchMinLength = 90;
       document.addEventListener('touchstart', function (e) {
+        var notLink = (e.target.nodeName !== "A" && e.target.parentNode.nodeName !== "A" && e.target.parentNode.parentNode.nodeName !== "A");
+        var notButton = (e.target.nodeName !== "BUTTON" && e.target.parentNode.nodeName !== "BUTTON" && e.target.parentNode.parentNode.nodeName !== "BUTTON");
         if (notLink && notButton) {
           e.preventDefault();
         }
@@ -84,6 +84,8 @@ export default function slider(sliderElement) {
         }
       });
       document.addEventListener('touchend', function (e) {
+        var notLink = (e.target.nodeName !== "A" && e.target.parentNode.nodeName !== "A" && e.target.parentNode.parentNode.nodeName !== "A");
+        var notButton = (e.target.nodeName !== "BUTTON" && e.target.parentNode.nodeName !== "BUTTON" && e.target.parentNode.parentNode.nodeName !== "BUTTON");
         if (notLink && notButton) {
           e.preventDefault();
         }

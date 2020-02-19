@@ -214,6 +214,20 @@
   }
 }
 
+#about {
+  .background {
+    picture, img {
+      object-position: 85% 90%;
+      height: 153%;
+
+      @media (min-width: $tablet) {
+        object-fit: cover;
+        height: inherit;
+      }
+    }
+  }
+}
+
 .project-title {
   color: white;
   justify-self: center;

@@ -7,6 +7,11 @@ html
     .slides
       section#intro.slide.in-view
         .background
+          picture
+            //- source(srcset="/assets/images/office/greenStripe.webp" type="image/webp")
+            //- source(srcset="/assets/images/office/greenStripe@1x.jpg" type="image/jpeg")
+            source(srcset="/assets/images/sketches/sketch1.png" type="image/png")
+            img(src="/assets/images/sketches/sketch1.png" alt="random doodles")
         h1 
           span.intro-text MY NAME IS BRUCE BENSON AND I DO…
           span.primary-text.main-heading
@@ -54,16 +59,16 @@ html
             a.project-title__link(href="/xbox.html")
               h2.main-heading Xbox Design Studio
                 span UX/UI, PRODUCTION
-      section#shudder.slide
-        .background
-          picture
-            source(srcset="/assets/images/azure/playfab_header@2x.webp" type="image/webp")
-            source(srcset="/assets/images/azure/playfab-header@2x.jpg" type="image/jpeg")
-            img(src="/assets/images/azure/playfab-header@2x.jpg" alt="3d rendering of arcade")
-        .project-title
-            a.project-title__link(href="/")
-              h2.main-heading Shudder
-                span COMING SOON • UX/UI, PRODUCT DESIGN
+      //- section#shudder.slide
+      //-   .background
+      //-     picture
+      //-       source(srcset="/assets/images/azure/playfab_header@2x.webp" type="image/webp")
+      //-       source(srcset="/assets/images/azure/playfab-header@2x.jpg" type="image/jpeg")
+      //-       img(src="/assets/images/azure/playfab-header@2x.jpg" alt="3d rendering of arcade")
+      //-   .project-title
+      //-       a.project-title__link(href="/")
+      //-         h2.main-heading Shudder
+      //-           span COMING SOON • UX/UI, PRODUCT DESIGN
       section#about.slide
         .background
           picture

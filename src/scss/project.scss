@@ -44,6 +44,7 @@
         .two-column {
             margin: 0 auto;
             box-sizing: border-box;
+            padding: 24px;
     
             @media(min-width: $tablet) {
                 padding: 42px 60px;
@@ -148,7 +149,12 @@
             img {
                 width: 100%;
                 object-fit: cover;
-                object-position: left;
+                object-position: 10% 50%;
+
+                @media(min-width: $tablet) {
+                    object-position: left;
+                }
+
             }
 
         }
@@ -156,18 +162,23 @@
 
     &.office {
         .full-image {
-            padding-left: 60px;
-            padding-right: 60px;
+            padding-left: 24px;
+            padding-right: 24px;
             box-sizing: border-box;
             max-width: 1440px;
             margin: 0 auto;
+
+            @media(min-width: $tablet) {
+                padding-left: 60px;
+                padding-right: 60px;
+            }
         }
     }
 
     .next-project {
         text-align: right;
         padding: 24px 34px;
-        margin: 20px 60px;
+        margin: 20px 24px;
         background: silver;
         position: relative;
 
@@ -220,6 +231,10 @@
             > a {
                 background: #107c10;
             }
+        }
+
+        @media(min-width: $tablet) {
+            margin: 20px 60px;
         }
     }
 

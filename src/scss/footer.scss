@@ -4,8 +4,15 @@ footer {
     font-size: 10px;
     letter-spacing: -0.35px;
     color: #2b2b2b;
+    display: flex;
+    box-sizing: border-box;
+    width: 100vw;
 
     .copyright {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        
         .name {
             font-weight: 900;
             font-style: italic;

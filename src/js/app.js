@@ -22,6 +22,7 @@ async function supportsWebp() {
 // show html after load
 window.onload = function() {
     document.body.classList.add('page-loaded');
+    document.getElementById('loading').classList.add("hidden");
 }
 
 if (document.getElementsByClassName("slides").length) {

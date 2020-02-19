@@ -1,0 +1,43 @@
+head
+    title Bruce Benson, some kind of designer
+  
+    link(href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i&display=swap" rel="stylesheet")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+
+    style(type="text/css").
+      body > *:not(#loading) {
+        visibility: hidden;
+        opacity: 0;
+      }
+      #loading {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        z-index: 10000;
+        position: relative;
+      }
+      #loading > span {
+        padding-top: calc(100vh - 50%);
+        display: block;
+        font-size: 82px;
+        font-weight: 900;
+        font-style: italic;
+        line-height: 0.77;
+        letter-spacing: -2.89px;
+        transform: rotate(-5deg);
+      }
+      #loading > img {
+        animation: rotate .3s cubic-bezier(0.4, 0, 1, 1) infinite;
+        width: 100px;
+      }
+      #loading.hidden {
+        display: none;
+      }
+      @keyframes rotate {
+          to {
+              transform: rotate(360deg);
+          }
+      }

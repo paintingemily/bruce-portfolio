@@ -1,0 +1,87 @@
+html
+  include head
+
+  body.project.office
+    include loader
+    include nav
+
+    .project-page
+
+      header
+        picture
+          source(srcset="/assets/images/office/greenStripe.webp" type="image/webp")
+          source(srcset="/assets/images/office/greenStripe@1x.jpg" type="image/jpeg")
+          img(src="/assets/images/office/greenStripe@1x.jpg" alt="3d rendering of old school computer")
+    
+      section.two-column
+        .two-column__heading
+            h1.project-page__title MICROSOFT OFFICE 365 
+            span.sub-head UX/UI, SUPER SECRET PRODUCT DESIGN
+            h2.section-title 
+              span
+                span.label Client: 
+                span Microsoft 
+              span
+                span.label Agency: 
+                span Insight Global
+        
+        .two-column__description
+          p.
+            I spent several months with the Microsoft Office 365 Commerce team, which is responsible  inventory management, payments and billing in the “MAC”. The MAC is the Microsoft 365 Admin Center, a self-serve portal for IT admins, from small businesses to large enterprises, which allows them to purchase, license, and manage their Microsoft products. These products can be either software-as-a-service (SAAS) or on-premise.
+
+          p.
+            A majority of my time was spent as a UX/product designer on a small team redesigning the inventory management and licensing features. The focus of the redesign was the incorporation of new and upcoming features, as well as adjusting the current UX workflows based on user feedback.
+          
+          p.
+            Besides myself, the ad-hoc team consisted of a design lead, a UX researcher, a UX writer, and a program manager. Our work was periodically shared out with stakeholders, primarily with our engineering partners.
+      
+      section.two-column
+        .two-column__heading
+      
+        .two-column__description
+          p.
+            The first phase of the project was spent gathering two sets of information. The first was an in-depth overview of the current space, engineering capabilities and how we currently managed over 900 unique software SKUs, both first and third party. The second set was user data, collected by historical user studies conducted by Microsoft, curtomer feedback, either through telemetry or customer engagement events, and support calls.
+
+          p.
+            These sets of information was then compared to upcoming features currently being developed, usability and accessibility requirements (WCAG 2.1 compliance), as well as the news terms and conditions, business requirements, and new data compliance, such as the EU GDPR which could have secondary or tertiary impacts.
+      
+      section.full-image
+        figure
+          picture
+            //- source(srcset="/assets/images/office/office365_1@2x.webp" type="image/webp")
+            //- source(srcset="/assets/images/office/office-365-1@2x.jpg" type="image/jpeg")
+            source(srcset="/assets/images/office/office365_1.png" type="image/png")
+            img(src="/assets/images/office/office365_1.png" alt="sketching wireframes process")
+          figcaption That resulted in whiteboarding and lots of notes- I have a compulsion where I have to push lead and ink around before I can move to pixels.
+        
+      
+      section.two-column
+        .two-column__heading
+        
+        .two-column__description
+          p.
+            At the end of every sprint, we conducted either a generative or an evaluative user test. It was vital in understanding our small business and enterprise customers, and validating our designs.
+
+          p.
+            The most important issue we faced in creating a scaling design system was not in the UI, but in understanding that as a business scales, work is delegated to a variety of roles. That’s the nature of growth of course; but addressing how work is delegated and how to solve for disjointed workflows between users became the crux of our design. A simplified example would be if one admin can purchase, but another admin is responsible for assigning that purchase to an end user, how can we make that process and comunication as pain free as possible?
+          
+          figure
+            picture
+              source(srcset="/assets/images/office/office365_2@2x.webp" type="image/webp")
+              source(srcset="/assets/images/office/office-365-2@2x.jpg" type="image/jpeg")
+              img(src="/assets/images/office/office-365-2@2x.jpg" alt="visual comps of tmobile work")
+            figcaption Besides solving for that challenge, I built prototypes for all the user tests, and even conducted some myself. As seen by the photo captured during one of the sessions, I’m a pro at getting feedback from users.
+          
+          p.
+            Our deliverables, of which I’m not at liberty to share, were solutions to those two general cases an IT admin face when they log into our system: they’ve come to complete a task they’ve initiated based on internal decisions, or they’re addressing tasks we have for them through a multi-channel notification.
+    
+    .next-project.azure
+      picture
+        source(srcset="/assets/images/nextProject_playfab@2x.webp" type="image/webp")
+        source(srcset="/assets/images/next-project-playfab@2x.jpg" type="image/jpeg")
+        img(src="/assets/images/next-project-playfab@2x.jpg" alt="playfab teaser image")
+      a(href="/project.html")        
+        span View Next Project
+        span.title AZURE PLAYFAB
+
+    include footer

@@ -1,54 +1,125 @@
 html
-  head
-    title Bruce Benson, some kind of designer
-  
-    link(href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i&display=swap" rel="stylesheet")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+  include head
 
-  body.project
+  body.project.azure
+    include loader
     include nav
 
     .project-page
 
       header
-      
+        picture
+          source(srcset="/assets/images/azure/playfab_header@2x.webp" type="image/webp")
+          source(srcset="/assets/images/azure/playfab-header@2x.jpg" type="image/jpeg")
+          img(src="/assets/images/azure/playfab-header@2x.jpg" alt="3d rendering of arcade")
+    
       section.two-column
         .two-column__heading
-            h1.project-page__title T-MOBILE DIGITS 
+            h1.project-page__title AZURE PLAYFAB
             span.sub-head UX/UI, DESIGN SYSTEM
             h2.section-title 
               span
                 span.label Client: 
-                span T-Mobile 
+                span Microsoft Azure Playfab
               span
                 span.label Agency: 
-                span Collabera
+                span TEKSystems
         
         .two-column__description
           p.
-            Nulla euismod augue vel nisl facilisis, quis interdum mauris mattis. Duis non magna et ligula sagittis ornare nec at nibh. Integer ut quam finibus enim efficitur vulputate sed nec diam. In semper felis pharetra lacus luctus consectetur. Sed nec accumsan nibh, ut fermentum dolor. Donec egestas euismod lorem, sed fermentum leo pretium ac. Praesent sed massa condimentum, sollicitudin risus ut, rhoncus ipsum.
+            Azure Playfab is a backend LiveOps system for video games- managing player data (such as identifying information), game usage from active users to server stats, inventory and other in-game objects and arrays, campaigns, the ability to create and manage segments, roles, etc. All the things we associate with LiveOps.
+
           p.
-            Fusce ultricies, metus ac ultricies rhoncus, enim lorem feugiat magna, varius varius ligula sapien sit amet arcu. Aenean sollicitudin pretium augue,consectetur lacinia felis fringilla a. Phasellus tempor hendrerit varius. Aenean eget leo in urna imperdiet semper. Cras rutrum lorem eget augue ullamcorper, nec efficitur mauris vehicula. Etiam convallis, nibh ut fermentum volutpat, felis nunc faucibus orci, eu dictum nibh arcu quis nisi. Vestibulum id commodo elit. Cras malesuada augue quis posuere imperdiet. Ut nunc dolor, posuere eu justo id, tincidunt pharetra libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed at nibh id tellus vehicula laoreet. Fusce ex ex, fermentum et mollis sit amet, sagittis elementum est. Morbi fermentum sodales porta. Morbi in justo malesuada, hendrerit mauris non, ultrices nibh.
+            I was asked to work with the Playfab team to create a design system after the team had seen what I had been building for Xbox Game Pass (we cohabitated on the same floor of Studio A, on Microsoft’s Redmond campus). The challenge was unique: in that in the time since Microsoft had acquired Playfab, a tremendous amount of work was put in by literally hundreds of developers. The design team of four, focused on feature design, didn’t have the time or resources to build a consistent visual or interaction pattern. 
+          
+          p
+            span Additionally, this design system had to be created in a way that would easy for designers to maintain, shared with developers, and needed to account for responsive design, which had not been created yet. I had a bit of work to do, 
+            i haha.
+          
+          p.
+            I started the project by conducting an audit of the site, starting with the UI and common controls before moving on to interaction patterns. With larger sites, it’s easy to scrape code for type and color variations, but it’s too difficult to take screenshots and draw overlays. I found the easiest thing to do was to create color code patterns, an example shown below, which can organize large amounts of information. This is great for identifying themes and especially isolating your edge cases. 
       
       section.full-image
-        img(src="https://www.placecage.com/1200/675" alt="nick cage")
+        picture
+          source(srcset="/assets/images/azure/playfab_1@2x.webp" type="image/webp")
+          source(srcset="/assets/images/azure/playfab-1@2x.jpg" type="image/jpeg")
+          img(src="/assets/images/azure/playfab-1@2x.jpg" alt="ux information architecture of tmobile work")
       
       section.two-column
         .two-column__heading
-            span.sub-head UX/UI, DESIGN SYSTEM
         
         .two-column__description
           p.
-            Cras pellentesque aliquet bibendum. Nulla rutrum posuere pharetra. Phasellus posuere arcu sit amet tempor accumsan. In volutpat pretium consequat. Suspendisse aliquam viverra finibus. Curabitur vel lacus turpis. Ut facilisis metus rutrum, luctus lectus pretium, fringilla metus. Proin eu libero pharetra enim consectetur tempor sed in ex. In hac habitasse platea dictumst. Nam convallis dolor ac ultrices lobortis. Nunc vehicula, nulla at rhoncus molestie, libero sem vulputate dui, facilisis consectetur justo nibh et ante.
+            After identifying UI instances, the audit moved onto interaction patterns. In this phase I was identifying interaction behaviors, and looking for use cases, edge cases, everything and anything. I still used color coded charts, but for clarification on the interactions I’ve included an example scenario below. 
+
           p.
-            Donec efficitur sapien sed massa commodo feugiat luctus quis purus. Nunc a turpis vel orci interdum laoreet. Aenean eget lorem eget orci pharetra pulvinar. Morbi eu ipsum posuere, porttitor orci et, vestibulum tortor. Praesent ut ornare ipsum. Mauris dictum, arcu in commodo scelerisque, orci lectus euismod neque, sed venenatis turpis diam interdum quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi elit nulla, scelerisque in lacinia vel, egestas in mi. Suspendisse commodo nec nisl ac aliquam. Mauris in tellus nunc. Integer tellus felis, placerat at massa id, lacinia sollicitudin odio. Proin justo metus, sodales et mi at, molestie ultricies velit. Nunc eu facilisis orci. Donec iaculis, lacus sed bibendum dapibus, augue velit ultrices est, in consequat justo lorem eget tortor. Suspendisse nec mollis mi. Curabitur sagittis lacus velit, eu tempor ligula gravida non.
+            In this example, some pages have a call-to-action button, in this case a save button, in the header or the footer. Additionally, some pages have a change state indicator (green for new, yellow for edited, and red for deleted), while other have an auto-save feature.
+          p.
+            Consolidating interactions was imperative, since fixing buttons in headers or footers would have a significant impact on responsive design.
         
       section.full-image
-        img(src="https://www.placecage.com/1200/675" alt="nick cage")
+        picture
+          source(srcset="/assets/images/azure/playfab_2@2x.webp" type="image/webp")
+          source(srcset="/assets/images/azure/playfab-2@2x.jpg" type="image/jpeg")
+          img(src="/assets/images/azure/playfab-2@2x.jpg" alt="visual comps of tmobile work")
+      
+      section.two-column
+        .two-column__heading
+        
+        .two-column__description
+          p.
+            The next examples cover early explorations into how developing a responsive design. At the end of the day it’s always a matter of balancing density. How much information is presented at what level, and how much do we collapse or expand, what do we expand or collapse, and where do we start looking at actual UX for addressing density.
+
+          p.
+            The first example is simply an expanded/collapse toggle, but shows how quickly a responsive UI can be cluttered with controls, and how or when to we surface pertinent information hidden inside collapsed elements. I’ve done a lot of responsive design over the years, and obviously everyone and every product has philosophies and principles on how to address this.
+          p.
+            The second is a responsive table design, showing two or the possible four options. I chose these two patterns, since they’re accessible, and they meet the intent of WCAG standards.
+      
+      section.full-image
+        picture
+          source(srcset="/assets/images/azure/playfab_3@2x.webp" type="image/webp")
+          source(srcset="/assets/images/azure/playfab-3@2x.jpg" type="image/jpeg")
+          img(src="/assets/images/azure/playfab-3@2x.jpg" alt="visual comps of tmobile work")
+      
+      section.two-column
+        .two-column__heading
+        
+        .two-column__description
+          p.
+            This second example is a responsive table design, showing two or the possible four options, collapse by row and collapse to “entity”. I chose these two patterns, since they’re accessible, and they meet the intent of WCAG standards. 
+
+          p.
+            As to how these are utilized and implemented is a pretty complicated question, and gets into that venn diagram between interaction and UX. If you’d really like to know, you can buy me coffee sometime, just bring a whiteboard.
+      
+      section.full-image
+        picture
+          source(srcset="/assets/images/azure/playfab_4@2x.webp" type="image/webp")
+          source(srcset="/assets/images/azure/playfab-4@2x.jpg" type="image/jpeg")
+          img(src="/assets/images/azure/playfab-4@2x.jpg" alt="visual comps of tmobile work")
+      
+      section.two-column
+        .two-column__heading
+        
+        .two-column__description
+          p.
+            The deliverable was a Sketch shared design library, shared through Invision’s Design System Manager with designers and developers alike. Here’s a peek at some of the atoms, without showing any of the larger components obviously (it’s not mine to share).
+
+          p.
+            I’ll just add my two cents about design systems here; building a robust library isn’t difficult, but if you do your job as thoroughly as possible, you’ll turn your designers into data-entry specialists. I’ve given that warning to lots of people, and have had it validated by those same people months or years later. It’s a truth I hope you don’t experience haha.
+
+      section.full-image
+        picture
+          source(srcset="/assets/images/azure/playfab_5@2x.webp" type="image/webp")
+          source(srcset="/assets/images/azure/playfab-5@2x.jpg" type="image/jpeg")
+          img(src="/assets/images/azure/playfab-5@2x.jpg" alt="visual comps of tmobile work")
     
-    .next-project.xbox
-      a(href="/project.html")        
+    .next-project.tmobile
+      picture
+        source(srcset="/assets/images/nextProject_tmobile@2x.webp" type="image/webp")
+        source(srcset="/assets/images/next-project-tmobile@2x.jpg" type="image/jpeg")
+        img(src="/assets/images/next-project-tmobile@2x.jpg" alt="tmobile project teaser image")
+      a(href="/tmobile.html")        
         span View Next Project
-        span.title XBOX DESIGN STUDIO
+        span.title T-MOBILE DIGITS
 
     include footer

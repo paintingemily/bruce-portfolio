@@ -13,6 +13,10 @@ nav {
         -webkit-backdrop-filter: blur(8px);
         backdrop-filter: blur(8px);
         background-blend-mode: multiply;
+
+        &:after {
+            opacity: 0;
+        }
     }
 
     &:before {
@@ -38,6 +42,7 @@ nav {
         bottom: 0;
         height: 1px;
         background: white;
+        transition: .5s opacity ease;
     }
 
     .logo {
@@ -50,6 +55,7 @@ nav {
         letter-spacing: -0.49px;
         color: #ffffff;
         text-transform: uppercase;
+        text-decoration: none;
     }
 
     #nav-trigger {
@@ -68,7 +74,7 @@ nav {
         z-index: 2;
 
         @media (min-width: $tablet) {
-            top: 0;
+            top: 5px;
             right: 45px;
             padding: 15px;
         }

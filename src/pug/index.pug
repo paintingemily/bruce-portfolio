@@ -1,17 +1,8 @@
 html
-  head
-    title Bruce Benson, some kind of designer
-  
-    link(href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i&display=swap" rel="stylesheet")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
-
-    style(type="text/css").
-      body {
-        visibility: hidden;
-        opacity: 0;
-      }
+  include head
 
   body
+    include loader
     include nav
     .slides
       section#intro.slide.in-view
@@ -25,39 +16,61 @@ html
           span.disclaimer * I HATE KEEPING UP WITH LABELS - UX, UI, PRODUCT, VISUAL, ETC. I FIGURE THINGS OUT AND TRY TO MAKE THEM LOOK COOL ;)
       section#office.slide
         .background
+          picture
+            source(srcset="/assets/images/office/greenStripe.webp" type="image/webp")
+            source(srcset="/assets/images/office/greenStripe@1x.jpg" type="image/jpeg")
+            img(src="/assets/images/office/greenStripe@1x.jpg" alt="3d rendering of old school computer")
         .project-title
-            a.project-title__link(href="/project.html")
+            a.project-title__link(href="/office.html")
               h2.main-heading Microsoft Office 365
                 span UX/UI, SUPER SECRET PRODUCT DESIGN
       section#azure.slide
         .background
+          picture
+            source(srcset="/assets/images/azure/playfab_header@2x.webp" type="image/webp")
+            source(srcset="/assets/images/azure/playfab-header@2x.jpg" type="image/jpeg")
+            img(src="/assets/images/azure/playfab-header@2x.jpg" alt="3d rendering of arcade")
         .project-title.block-style
           a.project-title__link(href="/azure.html")
             h2.main-heading Azure Playfab
               span UX/UI, DESIGN SYSTEM
       section#tmobile.slide
         .background
+          picture
+            source(srcset="/assets/images/tmobile/tmobile_header@2x.webp" type="image/webp")
+            source(srcset="/assets/images/tmobile/tmobile-header@2x.jpg" type="image/jpeg")
+            img(src="/assets/images/tmobile/tmobile-header@2x.jpg" alt="3d rendering of phone")
         .project-title
             a.project-title__link(href="/tmobile.html")
               h2.main-heading T-Mobile DIGITS
               span UX/UI, PRODUCT DESIGN
       section#xbox.slide
         .background
+          picture
+            source(srcset="/assets/images/xbox/xbox_header@2x.webp" type="image/webp")
+            source(srcset="/assets/images/xbox/xbox-header@2x.jpg" type="image/jpeg")
+            img(src="/assets/images/xbox-header@2x.jpg" alt="3d rendering of arcade")
         .project-title.block-style
             a.project-title__link(href="/xbox.html")
               h2.main-heading Xbox Design Studio
                 span UX/UI, PRODUCTION
       section#shudder.slide
         .background
+          picture
+            source(srcset="/assets/images/azure/playfab_header@2x.webp" type="image/webp")
+            source(srcset="/assets/images/azure/playfab-header@2x.jpg" type="image/jpeg")
+            img(src="/assets/images/azure/playfab-header@2x.jpg" alt="3d rendering of arcade")
         .project-title
-            a.project-title__link(href="/project.html")
+            a.project-title__link(href="/")
               h2.main-heading Shudder
                 span COMING SOON • UX/UI, PRODUCT DESIGN
       section#about.slide
         .background
+          picture
+            source(srcset="/assets/images/about/about-header-right.webp" type="image/webp")
+            source(srcset="/assets/images/about/about-header-right.jpg" type="image/jpeg")
+            img(src="/assets/images/about/about-header-right.jpg" alt="actual picture of Bruce's work space")
         .project-title.block-style
-            a.project-title__link(href="/project.html")
+            a.project-title__link(href="/about.html")
               h2.main-heading ABOUT
                 span WHO THE #@%&amp; IS THIS GUY?
-
-    include footer

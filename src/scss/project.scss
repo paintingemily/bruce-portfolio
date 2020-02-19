@@ -5,6 +5,16 @@
         .logo {
             color: black;
         }
+
+        &:after {
+            display: none;
+        }
+
+        #nav-trigger {
+            &:before, &:after {
+                background: black;
+            }
+        }
     }
 
     &-page {
@@ -12,26 +22,31 @@
 
         header {
             height: 420px;
-            width: 100%;
-            display: grid;
-            align-items: center;
-            justify-content: center;
+            width: 100vw;
+            display: block;
             background: #4E4E4E;
             color: white;
+
+            picture, img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
         }
 
         &__title {
             font-size: 42px;
             letter-spacing: -1.48px;
             margin-right: 111px;
+            color: #555;
         }
     
         .two-column {
-            margin: 64px auto;
+            margin: 0 auto;
             box-sizing: border-box;
     
             @media(min-width: $tablet) {
-                padding: 64px 120px;
+                padding: 42px 60px;
                 display: grid;
                 grid-template-columns: 420px calc(100% - 420px);
                 max-width: 1440px;
@@ -39,17 +54,18 @@
                 &__heading {
                     display: inline-block;
                     vertical-align: top;
-                    border-right: 1px solid $border;
                 }
     
                 &__description {
                     display: inline-block;
-                    padding-left: 62px;
+                    border-left: 1px solid #c4c4c4;
+                    padding-left: 24px;
                     box-sizing: border-box;
                 }
             }
     
             &__heading {
+                color: #333;
     
                 .sub-head {
                     display: block;
@@ -57,10 +73,12 @@
                     font-size: 16px;
                     margin-top: 10px;
                     font-weight: 500;
+                    color: #3e3e3e;
                 }
             }
     
             &__description {
+                color: #555;
     
                 p:not(:last-of-type) {
                     margin-bottom: 20px;
@@ -71,7 +89,6 @@
                 }
     
                 figure {
-                    margin-bottom: 40px;
     
                     img {
                         width: 100%;
@@ -79,6 +96,31 @@
         
                     figcaption {
                         margin-top: 20px;
+                    }
+                }
+
+                video {
+                    width: 100%;
+                    background: black;
+                    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+                    margin-bottom: 50px;
+                }
+
+                figure {
+                    padding: 50px 0;
+                    @media(min-width: $tablet) {
+                        position: relative;
+
+                        &:after {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            top: 0;
+                            left: -25px;
+                            width: 1px;
+                            height: 100%;
+                            background: white;
+                        }
                     }
                 }
     
@@ -90,15 +132,35 @@
     
         .full-image {
             text-align: center;
-            padding: 120px 0;
+            padding: 10px 0;
+            width: 100vw;
             
-            > img {
-                width: 100%;
-    
-                &:not(:last-child) {
-                    margin-bottom: 40px;
-                }
+            picture, img {
+                width:100%;
             }
+        }
+    }
+
+    &.about {
+        header {
+            height: initial;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+                object-position: left;
+            }
+
+        }
+    }
+
+    &.office {
+        .full-image {
+            padding-left: 60px;
+            padding-right: 60px;
+            box-sizing: border-box;
+            max-width: 1440px;
+            margin: 0 auto;
         }
     }
 
@@ -107,6 +169,7 @@
         padding: 24px 34px;
         margin: 20px 60px;
         background: silver;
+        position: relative;
 
         > a {
             text-decoration: none;
@@ -115,6 +178,7 @@
             padding: 12px 24px;
             display: inline-block;
             background: black;
+            position: relative;
 
             > span {
                 font-family: Roboto;
@@ -133,6 +197,23 @@
                     letter-spacing: -0.85px;
                 }
             }
+        }
+
+        picture {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 0;
+            object-fit: cover;
+        }
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
         }
 
         &.xbox {

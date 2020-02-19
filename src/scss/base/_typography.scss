@@ -78,39 +78,36 @@ h1 {
 }
 
 blockquote {
-    // font-family: 'Raleway', sans-serif;
-    font-family: 'bruce-hand';
-    // font-weight: 300;
-    // font-style: italic;
-    // font-size: 18px;
-    // font-size: 24px;
-    line-height: 1.16;
+
     text-align: center;
     max-width: 60vw;
     margin: 0 auto;
     padding: 40px 0;
 
     > p {
-        // font-family: 'Raleway', sans-serif;
-        // font-weight: 300;
-        // font-style: italic;
-        // font-size: 18px;
-        font-family: 'bruce-hand';
-        font-size: 40px;
-        line-height: 1.16;
-        margin-bottom: 1em;
-        letter-spacing: 1.5;
+        font-family: Roboto;
+        font-size: 24px;
+        font-weight: 300;
+        font-stretch: normal;
+        font-style: italic;
+        line-height: 1.22;
+        letter-spacing: -1.13px;
+        text-align: center;
+        color: #333333;
+
+        > a {
+            color: black;
+            display: inline-block;
+            padding: 0 10px;
+
+            &:first-of-type {
+                padding-left: 20px;
+            }
+        }
 
         @media (min-width: $tablet) {
-            font-size: 36px;
+            font-size: 32px;
         }
-    }
-
-    > footer {
-        font-family: 'bruce-hand';
-        font-size: 24px;
-        text-transform: uppercase;
-        letter-spacing: 1.5;
     }
 
     @media (min-width: $tablet) {
@@ -121,9 +118,15 @@ blockquote {
 }
 
 figcaption {
-    // font-style: italic;
-    // font-weight: 300;
-    // font-size: 14px;
-    font-family: 'bruce-hand';
-    line-height: 20px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.57;
+    letter-spacing: normal;
+    color: #555555;
+    margin-top: 20px;
+    text-align: left;
+
 }

@@ -1,0 +1,47 @@
+html
+  include head
+
+  body.project.about
+    include loader
+    include nav
+
+    .project-page
+
+      header
+        picture
+          source(srcset="/assets/images/about/about-header-crop.webp" type="image/webp")
+          source(srcset="/assets/images/about/about-header-crop.jpg" type="image/jpeg")
+          img(src="/assets/images/about/about-header-crop.jpg" alt="Bruce's desk")
+    
+      section.two-column
+        .two-column__heading
+            h1.project-page__title ABOUT ME
+            span.sub-head 
+            h2.section-title 
+              span
+                span.label FAVORITE BEVERAGE: 
+                span FLAT WHITE LATTE
+              span
+                span.label CURRENTLY LISTENING TO: 
+                span MISFITS
+        
+        .two-column__description
+            p
+                span Hey, I’m Bruce 
+                s Wayne
+                span  Benson, and I’m a designer in the Pacific NorthWest, the place full of hiking, biking, flannels and fishing… 
+                i things I don’t do. 
+                span Instead, I spend way too much time 
+                i (is there such a thing?) 
+                span on art, from drawing to short films. I read lots of comics, watch horror movies, am a lifelong Trekkie, and am always up for Jeopardy.
+            p.
+                For me, design is fundamentally about communication. Whether it’s reorganizing information architecture to communicate how systems work, choosing colors to communicate the state of things, or creating an illustration style to communicate tone.
+            p
+                span I enjoy problem solving 
+                i (or if you’re an optimist, finding solutions) 
+                span in this space. Simply put, I like to fix things and make them look cool.
+    
+    blockquote
+        p Let's connect.
+            a(href="https://www.linkedin.com/in/bruce-benson-415352b2/" target="_blank") LinkedIn
+            a(href="/assets/documents/brucebenson_resume.pdf" target="_blank") Resume

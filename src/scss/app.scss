@@ -16,7 +16,7 @@ body {
   display: none !important;
 }
 
-.page-loaded {
+.page-loaded > *:not(#loading) {
   visibility: visible;
   opacity: 1;
 }

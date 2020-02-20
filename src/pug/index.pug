@@ -10,8 +10,8 @@ html
           picture
             //- source(srcset="/assets/images/office/greenStripe.webp" type="image/webp")
             //- source(srcset="/assets/images/office/greenStripe@1x.jpg" type="image/jpeg")
-            source(srcset="/assets/images/sketches/sketch1.png" type="image/png")
-            img(src="/assets/images/sketches/sketch1.png" alt="random doodles")
+            source(data-srcset="/assets/images/sketches/sketch1.png" type="image/png")
+            img(class="lazy" data-src="/assets/images/sketches/sketch1.png" alt="random doodles" src="/assets/images/sketches/sketch-super-small.jpg")
         h1 
           span.intro-text MY NAME IS BRUCE BENSON AND I DO…
           span.primary-text.main-heading
@@ -24,7 +24,7 @@ html
           picture
             source(data-srcset="/assets/images/office/greenStripe.webp" type="image/webp")
             source(data-srcset="/assets/images/office/greenStripe@1x.jpg" type="image/jpeg")
-            img(class="lazy" data-src="/assets/images/office/greenStripe@1x.jpg" alt="3d rendering of old school computer" src="/assets/images/about/about-super-small.jpg")
+            img(class="lazy" data-src="/assets/images/office/greenStripe@1x.jpg" alt="3d rendering of old school computer" src="/assets/images/office/office-super-small.jpg")
         .project-title
             a.project-title__link(href="/office.html")
               h2.main-heading Microsoft Office 365
@@ -34,7 +34,7 @@ html
           picture
             source(data-srcset="/assets/images/azure/playfab_header@2x.webp" type="image/webp")
             source(data-srcset="/assets/images/azure/playfab-header@2x.jpg" type="image/jpeg")
-            img(class="lazy" data-src="/assets/images/azure/playfab-header@2x.jpg" alt="3d rendering of arcade" src="/assets/images/about/about-super-small.jpg")
+            img(class="lazy" data-src="/assets/images/azure/playfab-header@2x.jpg" alt="3d rendering of arcade" src="/assets/images/azure/playfab-super-small.jpg")
         .project-title.block-style
           a.project-title__link(href="/azure.html")
             h2.main-heading Azure Playfab
@@ -44,7 +44,7 @@ html
           picture.lazy
             source(data-srcset="/assets/images/tmobile/tmobile_header@2x.webp" type="image/webp")
             source(data-srcset="/assets/images/tmobile/tmobile-header@2x.jpg" type="image/jpeg")
-            img(class="lazy" data-src="/assets/images/tmobile/tmobile-header@2x.jpg" alt="3d rendering of phone" src="/assets/images/about/about-super-small.jpg")
+            img(class="lazy" data-src="/assets/images/tmobile/tmobile-header@2x.jpg" alt="3d rendering of phone" src="/assets/images/tmobile/tmobile-super-small.jpg")
         .project-title
             a.project-title__link(href="/tmobile.html")
               h2.main-heading T-Mobile DIGITS
@@ -54,7 +54,7 @@ html
           picture.lazy
             source(data-srcset="/assets/images/xbox/xbox_header@2x.webp" type="image/webp")
             source(data-srcset="/assets/images/xbox/xbox-header@2x.jpg" type="image/jpeg")
-            img(class="lazy" data-src="/assets/images/xbox-header@2x.jpg" alt="3d rendering of arcade" src="/assets/images/about/about-super-small.jpg")
+            img(class="lazy" data-src="/assets/images/xbox-header@2x.jpg" alt="3d rendering of arcade" src="/assets/images/xbox/xbox-super-small.jpg")
         .project-title.block-style
             a.project-title__link(href="/xbox.html")
               h2.main-heading Xbox Design Studio

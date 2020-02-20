@@ -3,6 +3,7 @@ import '../pug/index.pug';
 
 import '@babel/polyfill';
 import slider from './slider';
+import LazyLoad from './lazyload';
 
 // check if browser supports webp format images
 async function supportsWebp() {
@@ -21,6 +22,10 @@ async function supportsWebp() {
 
 // show html after load
 window.onload = function() {
+    var lazyLoadInstance = new LazyLoad({
+        elements_selector: ".lazy"
+        // ... more custom settings?
+    });
     document.body.classList.add('page-loaded');
     document.getElementById('loading').classList.add("hidden");
 }

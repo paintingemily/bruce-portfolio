@@ -149,7 +149,19 @@
         z-index: -1;
         /* border-radius: 50%; */
         // opacity: 1;
-        animation: blurIn 1s ease;
+        // animation: blurIn 1s ease;
+        opacity: 0;
+        transition: 1s ease opacity .2s;
+        display: none;
+      }
+    }
+  }
+
+  &.in-view {
+    // border: 5px solid red;
+    h1 {
+      &:before {
+        opacity: 1;
       }
     }
   }

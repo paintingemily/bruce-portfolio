@@ -47,12 +47,14 @@
     &:before {
       background: linear-gradient(165deg, #fccf3a 0%, #de791e 43%, #ea5a6f 100%);
       animation: 10s bkgGradient ease infinite;
+      background-size: 200% 200%;
     }
   
     &:after {
       background: linear-gradient(165deg, #fccf3a 0%, #de791e 43%, #ea5a6f 100%);
       opacity: .65;
       animation: 10s bkgGradient ease infinite;
+      background-size: 200% 200%;
     }
   }
   
@@ -212,7 +214,19 @@
 
     .project-title {
     
-      h2 {
+      &__link {
+        .main-heading {
+          transition: transform .3s ease;
+        }
+
+        &:hover {
+
+          .main-heading {
+            transition: transform .3s ease;
+            transform: rotate(-5deg);
+          }
+
+        }
       }
     }
 

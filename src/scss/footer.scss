@@ -16,6 +16,7 @@ footer {
         .name {
             font-weight: 900;
             font-style: italic;
+            margin-right: 3px;
         }
     }
 
@@ -26,6 +27,11 @@ footer {
             height: 18px;
             padding: 18px;
             float: right;
+            transition: .3s ease transform;
+
+            &:hover {
+                transform: scale(1.1);
+            }
         }
     }
 

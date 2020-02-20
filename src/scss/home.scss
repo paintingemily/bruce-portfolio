@@ -6,6 +6,7 @@
   left: 0;
   background-position: center center;
   background-size: cover;
+  animation: gentleScale 5s infinite alternate-reverse ease;
 
   picture, img {
     object-fit: cover;

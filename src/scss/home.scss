@@ -7,15 +7,6 @@
   background-position: center center;
   background-size: cover;
 
-  .lazy {
-    filter: blur(20px);
-
-    &.loaded {
-      filter: blur(0);
-      transition: .3s filter ease;
-    }
-  }
-
   picture, img {
     object-fit: cover;
     width: 100%;
@@ -316,6 +307,16 @@
 
 #tmobile {
   
+  .project-title {
+    background: black;
+    padding: 25px 35px 25px 35px;
+
+    @media (min-width: $tablet) {
+      background: none;
+      padding: 0;
+    }
+  }
+
   .project-title__link {
     color: #e20074;
   }

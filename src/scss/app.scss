@@ -20,3 +20,12 @@ body {
   visibility: visible;
   opacity: 1;
 }
+
+.lazy {
+  filter: blur(20px);
+
+  &.loaded {
+    filter: blur(0);
+    transition: .3s filter ease;
+  }
+}

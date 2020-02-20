@@ -10,9 +10,9 @@ html(lang="en")
 
       header
         picture
-          source(srcset="/assets/images/tmobile/tmobile_header@2x.webp" type="image/webp")
-          source(srcset="/assets/images/tmobile/tmobile-header@2x.jpg" type="image/jpeg")
-          img(src="/assets/images/tmobile/tmobile-header@2x.jpg" alt="3d rendering of phone")
+          source(data-srcset="/assets/images/tmobile/tmobile_header@2x.webp" type="image/webp")
+          source(data-srcset="/assets/images/tmobile/tmobile-header@2x.jpg" type="image/jpeg")
+          img(class="lazy" data-src="/assets/images/tmobile/tmobile-header@2x.jpg" alt="3d rendering of phone" src="/assets/images/tmobile/tmobile-super-small.jpg")
     
       section.two-column
         .two-column__heading
@@ -40,9 +40,9 @@ html(lang="en")
       
       section.full-image
         picture
-          source(srcset="/assets/images/tmobile/tmobile_1@2x.webp" type="image/webp")
-          source(srcset="/assets/images/tmobile/tmobile-1@2x.jpg" type="image/jpeg")
-          img(src="/assets/images/tmobile/tmobile-1@2x.jpg" alt="ux information architecture of tmobile work")
+          source(data-srcset="/assets/images/tmobile/tmobile_1@2x.webp" type="image/webp")
+          source(data-srcset="/assets/images/tmobile/tmobile-1@2x.jpg" type="image/jpeg")
+          img(class="lazy" data-src="/assets/images/tmobile/tmobile-1@2x.jpg" alt="ux information architecture of tmobile work" src="/assets/images/tmobile/super-small-tmobile-1@2x.jpg")
       
       section.two-column
         .two-column__heading
@@ -56,15 +56,15 @@ html(lang="en")
         
       section.full-image
         picture
-          source(srcset="/assets/images/tmobile/tmobile_2@2x.webp" type="image/webp")
-          source(srcset="/assets/images/tmobile/tmobile-2@2x.jpg" type="image/jpeg")
-          img(src="/assets/images/tmobile/tmobile-2@2x.jpg" alt="visual comps of tmobile work")
+          source(data-srcset="/assets/images/tmobile/tmobile_2@2x.webp" type="image/webp")
+          source(data-srcset="/assets/images/tmobile/tmobile-2@2x.jpg" type="image/jpeg")
+          img(class="lazy" data-src="/assets/images/tmobile/tmobile-2@2x.jpg" alt="visual comps of tmobile work" src="/assets/images/tmobile/super-small-tmobile-2@2x.jpg")
     
     .next-project.xbox
       picture
-        source(srcset="/assets/images/nextProject_xbox@2x.webp" type="image/webp")
-        source(srcset="/assets/images/next-project-xbox@2x.jpg" type="image/jpeg")
-        img(src="/assets/images/next-project-xbox@2x.jpg" alt="xbox teaser image")
+        source(data-srcset="/assets/images/nextProject_xbox@2x.webp" type="image/webp")
+        source(data-srcset="/assets/images/next-project-xbox@2x.jpg" type="image/jpeg")
+        img(class="lazy" data-src="/assets/images/next-project-xbox@2x.jpg" alt="xbox teaser image")
       a(href="/xbox.html")        
         span View Next Project
         span.title XBOX DESIGN STUDIO

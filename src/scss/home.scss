@@ -7,6 +7,15 @@
   background-position: center center;
   background-size: cover;
 
+  .lazy {
+    filter: blur(20px);
+
+    &.loaded {
+      filter: blur(0);
+      transition: .3s filter ease;
+    }
+  }
+
   picture, img {
     object-fit: cover;
     width: 100%;
@@ -228,6 +237,7 @@
 
 #about {
   .background {
+
     picture, img {
       object-position: 85% 90%;
       height: 153%;

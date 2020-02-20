@@ -323,12 +323,23 @@
 #tmobile {
   
   .project-title {
-    background: black;
-    padding: 25px 35px 25px 35px;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      background: #fff;
+      opacity: .3;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 1px 11px 9px #fff;
+    }
 
     @media (min-width: $tablet) {
-      background: none;
-      padding: 0;
+      &:before {
+        display: none;
+      }
     }
   }
 

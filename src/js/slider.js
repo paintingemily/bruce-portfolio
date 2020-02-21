@@ -15,6 +15,7 @@ export default function slider(sliderElement) {
     window.addEventListener(whatWheel, function (e) { 
       if (scrolled === false) { 
         var direction = e.wheelDelta || e.deltaY;
+        // var direction = e.deltaY;
         if (direction > 0) {
           changeSlide(-1);
         } else {

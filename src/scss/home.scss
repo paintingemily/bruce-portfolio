@@ -12,6 +12,9 @@
     object-fit: cover;
     width: 100%;
     height: 100%;
+    display: block;
+    transform: translateY(100px);
+    transition: 1s transform ease;
   }
 
   &:before {
@@ -209,6 +212,12 @@
       transition: 1s transform cubic-bezier(0.09, 0.53, 0.36, 1);
     }
 
+    .background {
+      picture, img, &:before, &:after {
+        transform: translateY(0);
+      }
+    }
+
     > * {
       transform: translateY(0);
     }
@@ -265,7 +274,7 @@
   box-sizing: border-box;
   display: grid;
   align-items: center;
-  transform: translateX(-100%);
+  transform: translateX(-300px);
 
   &.block-style {
     background: black;
@@ -307,17 +316,17 @@
 #office .background {
   animation: gentleScale 5s infinite alternate-reverse ease;
 
-  &:before {
-    background-image: linear-gradient(165deg, #3acffcad 0%, #de1e7245 43%, #5aeabb61 100%);
-    mix-blend-mode: hard-light;
-    animation: 10s bkgGradient ease infinite;
-  }
+  // &:before {
+  //   background-image: linear-gradient(165deg, #3acffcad 0%, #de1e7245 43%, #5aeabb61 100%);
+  //   mix-blend-mode: hard-light;
+  //   animation: 10s bkgGradient ease infinite;
+  // }
 
-  &:after {
-    background-image: linear-gradient(165deg, #3acffcad 0%, #de1e7245 43%, #5aeabb61 100%);
-    opacity: .65;
-    animation: 10s bkgGradient ease infinite;
-  }
+  // &:after {
+  //   background-image: linear-gradient(165deg, #3acffcad 0%, #de1e7245 43%, #5aeabb61 100%);
+  //   opacity: .65;
+  //   animation: 10s bkgGradient ease infinite;
+  // }
 }
 
 #tmobile {

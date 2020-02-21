@@ -59,7 +59,8 @@ export default function slider(sliderElement) {
       indicator.classList.add('slider__indicator')
       indicator.setAttribute('data-slider-target-index', index);
       indicatorContainer.appendChild(indicator);
-      indicator.setAttribute('href', '/#' + section.id)
+      indicator.setAttribute('href', '/#' + section.id);
+      indicator.setAttribute('aria-label', 'go to ' + section.id + ' slide');
 
       section.classList.add('slider__page');
       pages.push(section);

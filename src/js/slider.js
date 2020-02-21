@@ -59,6 +59,7 @@ export default function slider(sliderElement) {
       indicator.classList.add('slider__indicator')
       indicator.setAttribute('data-slider-target-index', index);
       indicatorContainer.appendChild(indicator);
+      indicator.setAttribute('href', '/#' + section.id)
 
       section.classList.add('slider__page');
       pages.push(section);
@@ -176,6 +177,11 @@ export default function slider(sliderElement) {
       gotoSlide(location.hash);
     }, 1);
   };
+
+  window.addEventListener("hashchange", function() {
+    window.scrollTo(0, 0);
+      gotoSlide(location.hash);
+  });
 
   // we have lift off
   if (document.readyState === 'complete') {

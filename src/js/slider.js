@@ -14,12 +14,12 @@ export default function slider(sliderElement) {
     var whatWheel = 'onwheel' in document.createElement('div') ? 'wheel' : document.onmousewheel !== undefined ? 'mousewheel' : 'DOMMouseScroll';
     window.addEventListener(whatWheel, function (e) { 
       if (scrolled === false) { 
-        var direction = e.wheelDelta || e.deltaY;
-        // var direction = e.deltaY;
+        // var direction = e.wheelDelta || e.deltaY;
+        var direction = e.deltaY;
         if (direction > 0) {
-          changeSlide(-1);
-        } else {
           changeSlide(1);
+        } else {
+          changeSlide(-1);
         }
         scrolled = true;
         setTimeout(function(){
